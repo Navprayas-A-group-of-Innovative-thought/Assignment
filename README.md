@@ -1,21 +1,21 @@
 # Assingment
 
-This repo is consist of your works which is completed as assingments . The team will review your code and guide accordingly .
+This repo consists of your works which is completed as Assingments . The team will review your code and guide accordingly .
 
-If you new to github and does not know how to setup git on your local machine follow these guidance .
+If you are new to Github and does not know how to setup Git on your local machine,follow these steps :
 
 ## Resources
 
-- Set up git
+- Setting up git
   - on windows [here](https://www.youtube.com/watch?v=2j7fD92g-gE)
   - on linux [here](https://www.youtube.com/watch?v=ZMgLZUYd8Cw)
 - Cloning repo
   - [here](https://www.youtube.com/watch?v=bKuE-afbRLU)
 - Branching
   - [here](https://www.youtube.com/watch?v=EyucZ2L0Tkg)
-  - **Note** :- For now learn atleast how to create branch there is no need of forking and creating PR . Since member have been given write access so you can directly push your code
+  - **Note** :- For now learn atleast how to create branch, there is no need of forking and creating PR . Since member have been given write access so you can directly push your code.
 
-**Disclaimer:** I have not watched all the videos mention here but it is enough to get you started . still if you face any issue you can contact me.
+**Disclaimer:** I have not watched all the videos mentioned here but it is enough to get you started . If you face any issue, you can contact me.
 
 ## Contribution guide
 
