@@ -1,0 +1,21 @@
+{
+  "name": "confusionserver",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "express-router": "0.0.1",
+    "http-errors": "^1.6.3",
+    "jade": "~1.11.0",
+    "mongoose": "^5.9.25",
+    "mongoose-type-email": "^1.0.12",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.9.1"
+  }
+}
