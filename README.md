@@ -21,14 +21,14 @@ If you new to github and does not know how to setup git on your local machine fo
 
 Everyone create a branch of your name and push all your assingments in your respective branch only.
 
-- > Clone the project using <code> git clone "repo link" </code>
-- > <code>cd Assingment </code> to move to respective directory
-- > <code> git checkout -b "Your name" </code>
+- Clone the project using <code> git clone "repo link" </code>
+- <code>cd Assingment </code> to move to respective directory
+- <code> git checkout -b "Your name" </code>
   - **Note** : Now add your folder into cloned folder to add your work and check them by <code> git status </code>
     your work will shown in red
-- > git add . (To add your work)
+- git add . (To add your work)
   - **Note** : After this command again use <code> git status </code> and check if your work is green now
-- > <code>git commit -m "commit message"</code>
+- <code>git commit -m "commit message"</code>
   - **Note**: Add relevant message like Assignment 1 completed
-- > <code>git push -u origin "Your branch name"</code>
+- <code>git push -u origin "Your branch name"</code>
   - **Note:** Before this command make sure you are on correct branch by using <code> git branch </code> Your current active branch will be green
