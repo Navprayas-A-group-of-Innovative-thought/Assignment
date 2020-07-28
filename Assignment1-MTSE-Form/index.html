@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTSE - Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="left"></div> -->
+
+      <div class="right">
+        <div class="center">
+          <img
+            src="http://navprayas.in/static/img/banner1.png"
+            class="logo"
+            alt="Logo"
+          />
+        </div>
+        <h1>MTSE - Registration Form</h1>
+        <form action="#" name="mtseForm" id="mtse-form">
+          <div class="floating">
+            <input type="text" name="name" id="name" placeholder="Name" />
+            <label for="name">Name</label>
+          </div>
+
+          <div class="floating">
+            <input
+              type="text"
+              name="fatherName"
+              id="fatherName"
+              placeholder="Father's Name"
+            />
+            <label for="fatherName">Father's Name</label>
+          </div>
+
+          <div class="floating">
+            <input
+              type="text"
+              name="motherName"
+              id="motherName"
+              placeholder="Mother's Name"
+            />
+            <label for="motherName">Mother's Name</label>
+          </div>
+
+          <div>
+            <label for="class">Class</label>
+            <select name="class" id="class">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <div class="floating">
+            <input type="text" name="school" id="school" placeholder="School" />
+            <label for="school">School</label>
+          </div>
+          <div class="floating">
+            <input
+              type="number"
+              name="MobNo"
+              id="MobNo"
+              placeholder="Phone No."
+            />
+            <label for="MobNo">Phone No.</label>
+          </div>
+          <div class="floating">
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Address"
+            />
+            <label for="address">Address</label>
+          </div>
+          <div class="floating">
+            <input
+              type="text"
+              name="landmark"
+              id="landmark"
+              placeholder="Landmark"
+            />
+            <label for="landmark">Landmark</label>
+          </div>
+          <div>
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const form = document.querySelector("form");
+
+      document.addEventListener("submit", (e) => {
+        console.log(e.target);
+        const formData = new FormData(e.target);
+        let formObj = {};
+        // for (let value of data.values()) {
+        //   console.log(value);
+        // }
+
+        for (let key of formData.keys()) {
+          formObj[key] = formData.get(key);
+        }
+
+        console.log(formObj);
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
