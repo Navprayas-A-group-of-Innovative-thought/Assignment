@@ -1,8 +1,8 @@
 # Assingment
 
-This repo consists of your works which is completed as Assingments . The team will review your code and guide accordingly .
+This repo consists of your works which is completed as Assignments . The team will review your code and guide accordingly .
 
-If you are new to Github and does not know how to setup Git on your local machine,follow these steps :
+If you are new to Github and don't know how to setup Git on your local machine,follow these steps :
 
 ## Resources
 
