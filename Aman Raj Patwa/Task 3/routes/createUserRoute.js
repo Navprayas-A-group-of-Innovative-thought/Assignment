@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var router = express.Router();
 
-// including Navprayas database ~ starts 
+// including createUserSchema database ~ starts 
 const mongoose = require('mongoose');
 const userField = require('../models/createUserSchema');
 router.use(bodyParser.json());
