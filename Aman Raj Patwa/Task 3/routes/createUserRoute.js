@@ -33,7 +33,7 @@ router.route('/')
 })
 
 
-
+ //it can be used to file list of member | volunteer | general
 .put((req, res, next) => {
     userField.find({"type.isVolunteer":true})
     .then((found) => {
