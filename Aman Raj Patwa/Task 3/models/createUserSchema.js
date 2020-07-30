@@ -1,47 +1,28 @@
 const mongoose = require('mongoose');
-const mongooseUniquevalidator = require('mongoose-unique-validator');
 require('mongoose-type-email');
 const Schema = mongoose.Schema;
-bcrypt = require('bcryptjs'),
-SALT_WORK_FACTOR = 10;
 
-const cryptoRandomString = require('crypto-random-string');
+//const mongooseUniquevalidator = require('mongoose-unique-validator');
+//bcrypt = require('bcryptjs'),
+//SALT_WORK_FACTOR = 10;
+//const cryptoRandomString = require('crypto-random-string');
 
 // schema or the structure for the users 
-const userSchema = new Schema({
-    type :{
+const userSchema = new Schema(
+    {
         isVolunteer :{ type:Boolean, default:false},
         isMember: { type:Boolean, default:false},
-        isGeneral : { type:Boolean, default:false}
-    },
-    users : [{
-    firstName: {
-        type: String,
-        required: true
-    },
-    lastName:
-    {
-        type: String,
-        required: true
-    },
-    email:{
-        type : mongoose.SchemaTypes.Email,
-        required: true,
-        unique: true
-    },
-    password: {type:String , default: cryptoRandomString({length: 6, type: 'base64'})},
-    gender:{
-        type: String,
-        required : true
-    },
-    dob: {
-        type: Date,
-        required: true,
-        trim: true,
-    }
-}]
+        isGeneral : { type:Boolean, default:false},
+        firstName: { type: String, required: true},
+        lastName:{ type: String,required: true},
+        email:{ type : mongoose.SchemaTypes.Email, required: true},
+        password: {type:String , default:"go" },
+        gender:{ type: String,required : true },
+        dob: { type: Date,required: true,trim: true}
+    });
+/*
 
-});
+ // this commented code has been replaced for the random password generation by crypto-random-string 
 
 userSchema.pre('save', function(next) {
     var user = this;
@@ -70,5 +51,7 @@ userSchema.methods.comparePassword = function(candidatePassword, cb) {
         cb(null, isMatch);
     }); 
 };
-userSchema.plugin(mongooseUniquevalidator);
+*/
+
+//userSchema.plugin(mongooseUniquevalidator);
 module.exports = mongoose.model('createUserSchema', userSchema);

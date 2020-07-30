@@ -32,6 +32,7 @@ router.route('/')
     .catch((err) => next(err));
 })
 
+// currently not in work
 .put((req, res, next) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /');
@@ -47,6 +48,7 @@ router.route('/')
     }, (err) => next(err))
     .catch((err) => next(err));    
 });
+
 
 module.exports = router;
 

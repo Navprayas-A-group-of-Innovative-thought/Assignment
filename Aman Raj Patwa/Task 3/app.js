@@ -35,51 +35,8 @@ var navprayasRouter = require('./routes/navprayasRoute');
 var createUserRouter = require('./routes/createUserRoute');
 app.use('/createUsers',createUserRouter);
 app.use('/userDetails', navprayasRouter);
-// ----------------- Routing  ~ ends
+// ----------------- Routing  ~ ends 
 
-createUserSchema.aggregate([{ $project : {_id:0, email:'$users.email',password:'$users.password'}}])
-.then((found)=>{
-   console.log('inserted',found);
-  },(err)=>console.log(err))
-/*
-// ------------------ send mail ~nodemailer
-
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: 'mail.YOURDOMAIN.com',
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: 'YOUREMAIL', // generated ethereal user
-        pass: 'YOURPASSWORD'  // generated ethereal password
-    },
-    tls:{
-      rejectUnauthorized:false
-    }
-  });
-
-  
-  // setup email data with unicode symbols
-  let mailOptions = {
-      from: '"Nodemailer Contact" <patwaaman007.com>', // sender address
-      to: '', // list of receivers
-      subject: 'Node Contact Request', // Subject line
-      text: 'Hello world?', // plain text body
-      html: output // html body
-  };
-
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          return console.log(error);
-      }
-      console.log('Message sent: %s', info.messageId);   
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-      res.render('contact', {msg:'Email has been sent'});
-  });
-
-*/
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
