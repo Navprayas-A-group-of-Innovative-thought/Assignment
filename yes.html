@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style type="text/css">
+    body{
+        background-image: url('https://tse4.mm.bing.net/th?id=OIP.pqCn61aWNVUJrtHoAYXeIgHaEo&pid=Api&P=0&w=268&h=168');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .form-style-3{
+        max-width: 650px;
+
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        margin: 0 auto;
+    }
+    .form-style-3 .head{
+        font-size: 45px;
+        margin: 2vh;
+        text-align: center;
+    }
+    .form-style-3 .sub-head{
+        font-size: 30px;
+        margin: 2vh;
+        text-align: center;
+    }
+
+    .form-style-3 label{
+        display:block;
+        margin-bottom: 10px;
+    }
+    .form-style-3 label > span{
+        float: left;
+        width: 100px;
+        color: #080809;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .form-style-3 fieldset{
+        border-radius: 10px;
+        margin: 0px 0px 10px 0px;
+        padding: 20px;
+        background-color: #745c6c26;
+    }
+    .form-style-3 fieldset legend{
+        color: #200303;
+        border: 1px solid rgb(194, 193, 193);
+        border-radius: 5px 5px 0px 0px;
+        padding: 0px 8px 3px 8px;
+        font-weight: bold;
+        font-size: 15px;
+        background-color: #6779e6;
+    }
+    .form-style-3 textarea{
+        width:300px;
+        height:100px;
+    }
+    .form-style-3 input[type=text],
+    .form-style-3 input[type=date],
+    .form-style-3 input[type=datetime],
+    .form-style-3 input[type=number],
+    .form-style-3 input[type=search],
+    .form-style-3 input[type=time],
+    .form-style-3 input[type=url],
+    .form-style-3 input[type=tel],
+    .form-style-3 input[type=email],
+    .form-style-3 select,
+    .form-style-3 textarea{
+        border-radius: 3px;
+        border: 1px solid #729af0;
+        outline: none;
+        padding: 5px 8px 5px 8px;
+        width:50%;
+    }
+
+    .form-style-3 select{
+        width: 15%;
+    }
+    .form-style-3 input[type=number]{
+        width: 10%;
+    }
+    .form-style-3 input[type=tel]{
+        width: 30%;
+    }
+    
+
+
+    .form-style-3  input[type=submit],
+    .form-style-3  input[type=button]{
+        background: #00FF00;
+        border: 1px solid #729af0;
+        padding: 5px 15px 5px 15px;
+        border-radius: 3px;
+        border-radius: 3px;
+        font-weight: bold;
+    }
+    .required{
+        color:red;
+        font-weight:normal;
+    }
+    .gender{
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    .item{
+        display: flex;
+    }
+    .item label{
+        margin-top: 8px;
+    }
+    .btn{
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+
+    @media screen and (max-width:660px){
+        .gender{
+            display: unset;
+        }
+
+        .item:nth-child(3){
+            margin-left: 6.2rem;
+        }
+        .item:nth-child(4){
+            margin-left: 6.2rem;
+        }
+        .form-style-3 input[type=file]{
+            width: 68%;
+        }
+        .form-style-3 fieldset{
+            padding-right: unset;
+        }
+    }
+
+    </style>
+
+
+
+
+<body>
+
+
+    <div class="form-style-3">
+        <div class="head">Rangoli Competition</div>
+        <div class="sub-head">Registration Form</div>
+        <form>
+            <fieldset><legend>Team Info</legend>
+                <label for="team_field1">
+                    <span>Team Name <span class="required">*</span></span>
+                    <input type="text" class="input-field" name="team_field1" value="" maxlength="50" />
+                </label>
+                <label for="team_field2">
+                    <span>Number of Members <span class="required">*</span></span>
+                    <select name="team_field2" class="select-field">
+                        <option value="select" disabled>--select--</option>
+                      
+                        <option value="1" >1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Member 1</legend>
+                <label for="member1_field1">
+                    <span>Name <span class="required">*</span></span>
+                    <input type="text" class="input-field" name="member1_field1" value="" maxlength="50" />
+                </label>
+
+                <label for="member1_field2">
+                    <span>Age <span class="required">*</span></span>
+                    <input type="number" class="input-field" name="member1_field2" value="" maxlength="2" />
+                </label>
+
+                <label for="member1_field3">
+                    <span>Contact No. <span class="required">*</span></span>
+                    <input type="tel" class="input-field" name="member1_field3" value="" maxlength="10" />
+                </label>
+
+                <label for="member1_field4">
+                    <span>Proof of Identity <span class="required">*</span></span>
+                    <input type="file" class="input-field" name="member1_field4" value="" />
+                </label>
+                <br>
+                <div class="gender">
+                    <label for="member1_field5">
+                        <span>Gender <span class="required">*</span></span></span>
+                    </label>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member1_field5" value="" >
+                        <label for="member1_field51">
+                            <span>Male</span>
+                        </label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member1_field5" value="" >
+                        <label for="member1_field52">
+                            <span>Female</span>
+                        </label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member1_field5" value="" >
+                        <label for="member1_field53">
+                            <span>Other</span>
+                        </span></label>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <fieldset>
+                <legend>Member 2</legend>
+                <label for="member2_field1">
+                    <span>Name <span class="required">*</span></span>
+                    <input type="text" class="input-field" name="member2_field1" value="" maxlength="50" />
+                </label>
+
+                <label for="member2_field2">
+                    <span>Age <span class="required">*</span></span>
+                    <input type="number" class="input-field" name="member2_field2" value="" maxlength="2" />
+                </label>
+
+                <label for="member2_field3">
+                    <span>Contact No. <span class="required">*</span></span>
+                    <input type="tel" class="input-field" name="member2_field3" value="" maxlength="10" />
+                </label>
+
+                <label for="member2_field4">
+                    <span>Proof of Identity <span class="required">*</span></span>
+                    <input type="file" class="input-field" name="member2_field4" value="" />
+                </label>
+
+                <br>
+                <div class="gender">
+                    <label for="member2_field5">
+                        <span>Gender <span class="required">*</span></span>
+                    </label>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member2_field5" value="" >
+                        <label for="member2_field51">
+                            <span>Male</span>
+                        </label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member2_field5" value="" >
+                        <label for="member2_field52">
+                            <span>Female</span>
+                        </label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member2_field5" value="" >
+                        <label for="member2_field53">
+                            <span>Other</span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Member 3</legend>
+                <label for="member3_field1">
+                    <span>Name <span class="required">*</span></span>
+                    <input type="text" class="input-field" name="member3_field1" value="" maxlength="50" />
+                </label>
+
+                <label for="member3_field2">
+                    <span>Age <span class="required">*</span></span>
+                    <input type="number" class="input-field" name="member3_field2" value="" />
+                </label>
+
+                <label for="member3_field3">
+                    <span>Contact No. <span class="required">*</span></span>
+                    <input type="tel" class="input-field" name="member3_field3" value="" maxlength="10"/>
+                </label>
+
+                <label for="member3_field4">
+                    <span>Proof of Identity <span class="required">*</span></span>
+                    <input type="file" class="input-field" name="member3_field4" value="" />
+                </label>
+                <br>
+                <div class="gender">
+                    <label for="member3_field5">
+                        <span>Gender <span class="required">*</span></span></span>
+                    </label>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member3_field5" value="" >
+                        <label for="member3_field51">
+                            <span>Male</span>
+                        </label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member3_field5" value="" >
+                        <label for="member3_field52">
+                            <span>Female </span>
+                        </label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" class="input-field" name="member3_field5" value="" >
+                        <label for="member3_field53">
+                            <span>Other </span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <fieldset>
+                <legend>Address</legend>
+                <label for="field6">
+                    <span>Address <span class="required">*</span></span>
+                    <textarea name="field6" class="textarea-field"></textarea>
+                </label>
+
+            </fieldset>
+            <label class="btn">
+                <span> </span><input type="submit" value="Submit" />
+            </label>
+        </form>
+    </div>
+
+
+</body>
+</html>
