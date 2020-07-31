@@ -62,13 +62,13 @@ router.route('/')
         var transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
-            user: 'palubalu123@gmail.com',      // replace with the navprayas official email id
-            pass: 'amanpalu0071'                // replace with corresponding email password
+            user: 'Navprayas@gmail.com',      // replace with the navprayas official email id
+            pass: 'xxxxxxxxxxxx'                // replace with corresponding email password
           }
         });
         
         var mailOptions = {
-          from: 'palubalu123@gmail.com',           // replace with the navprayas official email id
+          from: 'Navprayas@gmail.com',           // replace with the navprayas official email id
           to: temp[i].email,                       //   refers to every email we have pushed in database 
           subject: 'Sending Email using Node.js',  
           text: temp[i].password                    // refers to randomly generated password for the particular email id.
