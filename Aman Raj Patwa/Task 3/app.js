@@ -37,6 +37,8 @@ app.use('/createUsers',createUserRouter);
 app.use('/userDetails', navprayasRouter);
 // ----------------- Routing  ~ ends 
 
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

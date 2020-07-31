@@ -93,12 +93,12 @@ router.route('/')
 
  //it can be used to file list of member | volunteer | general
 .put((req, res, next) => {
-    userField.find({"type.isVolunteer":true})
+    userField.find({isVolunteer :true})
     .then((found) => {
         console.log(' inserted ',found );
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
-        res.json(users);
+        res.json(found);
     }, (err) => next(err))
     .catch((err) => next(err));
 })
