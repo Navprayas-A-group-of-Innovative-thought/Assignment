@@ -1,0 +1,85 @@
+body {
+  background-color: rgb(247, 246, 186) ;
+  
+}
+
+.top1 {
+  font-family: algerian ;
+  text-align: center;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+}
+
+.top2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#puzzle {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.col1 {
+  float:left;
+  width: 50%:
+}
+.col2 {
+  float: right;
+  width: 50%;
+}
+
+.field1 , .field2 , .field3 {
+  background-color: white;
+  text-align: justify;
+  border-radius: 15px;
+  border:3px solid black;
+  padding: 15px;
+}
+
+legend {
+    background-color: rgb(247, 67, 44);
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    border:2px double grey;
+}
+
+.team input[type=text] {
+  width:5cm;
+  text-transform: capitalize;
+  padding:8px;
+}
+
+.field1 input[type=text],
+.field2 input[type=text],
+.field3 input[type=text] {
+  text-transform: capitalize;
+  padding-left: 8px;
+  box-sizing: border-box;
+  width:300px;
+  height:0.7cm;
+  
+}
+
+ input[type=submit] {
+  background: green;
+  text-shadow: 10px;
+  border:2px solid black;
+  color:white;
+  padding: 5px;
+
+}
+
+textarea {
+  width: 50%;
+  height: 50px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+
