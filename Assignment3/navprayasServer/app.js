@@ -13,7 +13,7 @@ var mtseSchema = require('./models/mtse')
 var puzzleSchema = require('./models/puzzle')
 var rangotsavSchema = require('./models/rangotsav')
 const url = 'mongodb://localhost:27017/Navprayas';
-const connect = mongoose.connect(url);
+const connect = mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 
 connect.then((db) => {
   console.log("Database connected!!");
