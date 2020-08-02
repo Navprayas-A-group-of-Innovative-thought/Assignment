@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
+}
+
+body {
+  margin: 0 auto;
+}
+
+.navbar {
+  max-width: 100%;
+  height: 10vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background: red; */
+}
+
+/* .navbar {
+    
+} */
+
+.navbar-items {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #3273dc;
+  cursor: pointer;
+}
+
+.navbar-item {
+  margin-right: 5px;
+  height: 1.5rem;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.5;
+}
+
+.navbar-item:hover {
+  background: #3273dc;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropDown-content {
+  display: none;
+  padding-top: 2rem;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  min-height: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropDown-content a {
+  text-align: center;
+  margin-left: 2px;
+}
+
+.dropDown-content a:hover {
+  color: #000;
+  background-color: #f1f1f1;
+}
+
+.dropDown:hover .dropDown-content {
+  display: block;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  margin-right: 2rem;
+  width: 120px;
+  text-align: center;
+}
+
+.rounded {
+  padding: 0.5rem;
+  border: 1px solid #3273dc;
+  border-radius: 25px;
+}
+
+.rounded:hover {
+  background: #3273dc;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  /* .navbar {
+    background: blue;
+  } */
+
+  .navbar-brand {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+  }
+
+  .navbar-items {
+    display: none;
+    /* position: fixed;
+    height: 100vh;
+    width: 100%; */
+  }
+
+  .line {
+    background: #000000;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+  }
+
+  .ham {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+  }
+
+  .logo {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+  }
+
+  .sideDrawer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* height: 100vh; */
+  }
+}
