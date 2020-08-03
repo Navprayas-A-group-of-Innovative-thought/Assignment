@@ -1,4 +1,4 @@
-### Starter Template for Backend
+### Starter Template for Frontend
 
 ```
 git clone -b starter-frontend https://github.com/Navprayas-A-group-of-Innovative-thought/Assignment.git
