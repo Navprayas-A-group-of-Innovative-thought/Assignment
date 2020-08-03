@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <center><h1>ASSIGNMENT 2</h1></center>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#rectangle {
+  height: 300px;
+  width: 400px;
+  background-color:blue;
+}
+</style>
+
+</head>
+<body>
+<button onclick="myfunction()">Change the height of rectangle</button>
+<button onclick="myfunctiona()">Change the colour of rectangle</button>
+<br>
+<br>
+<div id="rectangle">
+</div>
+<script>
+function myfunction(){
+document.getElementById("rectangle").style.height="400px";
+}
+function myfunctiona(){
+document.getElementById("rectangle").style.backgroundColor="red";
+}
+</script>
+<hr>
+<p>Enter the number to check whether that number lies between 1 and 10 or not.</p><br>
+Get Input:<input id="numb">
+<button type="button" onclick="myfunc()">Submit</button>
+<p id="message"></p>
+<script>
+    function myfunc(){
+        var text;
+        var x=document.getElementById("numb").value;
+        if(x<1||x>10||x==" "){
+            text="Input Invalid";
+            
+        }
+        else
+        text="Valid Input";
+        document.getElementById("message").innerHTML=text;
+    }
+</script>
+<hr>
+<p id="query"></p>
+<script>
+    document.getElementById("query").innerHTML="Screen height is: "+screen.height+"<br>"+"Screen width is: "+screen.width;
+</script>
+</body>
+</html> 
