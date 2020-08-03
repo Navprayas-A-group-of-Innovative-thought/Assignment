@@ -5,7 +5,7 @@ git clone -b starter-backend https://github.com/Navprayas-A-group-of-Innovative-
 ```
 
 ```
-cd backend
+cd Assignment/backend
 npm install
 git commit -m "commit message"
 git push -u origin "your branch"
