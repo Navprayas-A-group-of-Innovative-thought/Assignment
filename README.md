@@ -1,14 +1,31 @@
-# Assingment
+### Starter Template for Frontend
 
-## Contribution guide
+```
+git clone -b starter-frontend https://github.com/Navprayas-A-group-of-Innovative-thought/Assignment.git
+```
 
-Everyone create a branch of your name and push all your assingments in your respective branch only.
+```
+cd Assignment/frontend
+npm install
+npm start
+git commit -m "commit message"
+git push -u origin "your branch"
+```
+<br>
+##### Folders and their meaning
+<br>
+<br>
+###### screens:
+write all your screen components here
 
+###### components:
+write all your small compoennts that will be used in screens
 
- - > Clone the project using git clone "repo link"
-- > cd Assingment to move to respective directory
-- > git checkout -b "Your name"
-- > git add . (To add your work)
-- > git commit -m "commit message"
-- > git push -u origin "Your branch name" 
- 
+###### reducers :
+used for writing reducer functions while using redux
+
+###### actions:
+used for writing acrions functions while using redux
+
+###### store.js:
+used for creating store while suing redux
