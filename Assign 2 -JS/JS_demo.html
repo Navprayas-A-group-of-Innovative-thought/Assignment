@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Assignment 2</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="My JavaScript learning page">
+		<meta name="author" content="Ravi">
+	</head>
+
+	<body>
+		<center>
+	<form>
+		<h1>Hands on JavaScript-I</h1>
+		<p>This is a number range checker.Your input is only valid if it belongs to [1,10].</p>
+		<label for="num">Enter a number here : </label>
+		<input type="number" id="num" name="num">
+		<button type="button" onclick="check()" >Submit</button>
+		<input type="reset">
+		<h5 id="output1"></h5>
+	</form>
+		<hr><br>
+
+		<h1>Hands on JavaScript-II</h1>
+		<lable >To know the width and height of current window:</lable>
+		<button type="button" onclick="res()">Clicke here </button>
+		<h5 id="output2"></h5>
+		<hr>
+	
+	
+		<h1>Hands on JavaScript-III</h1>
+		<p>The below rectangle has following properties :- </p>
+		<p id="h1">Height = 300 px</p>
+		<p id="w1">Width = 400 px</p>
+		<p id="c1">Color = Yellow</p>
+		<canvas id="rectangle" 
+			width="400px" 
+			height="300px" 
+			style="border:2px solid;background-color: yellow;"></canvas>
+			
+			<p id="hChange"></p> 
+			<p id="cChange"></p>
+		<button type="button" onclick="changeHeight()" >Click here to change the height</button>
+		<button type="button" onclick="changeColor()" >Click here to change the color</button>
+		<button type="button" onclick="resetP()">Reset</buton>
+	
+	</center>
+		<script type="text/javascript">
+			function check() {
+				var n=document.getElementById('num').value;
+				var out;
+				if(n>0 && n<11)
+					out="Input is okay";  
+				else
+					out="Invalid";
+
+					document.getElementById("output1").innerHTML="Output : "+ out;
+			}
+					
+			function res() {
+				var w	= window.innerWidth;
+				var h = window.innerHeight;
+				document.getElementById("output2").innerHTML="Resolution of your current window: "+ w +" px X "+ h+" px";
+			}
+			
+			function changeColor() {
+				document.getElementById('rectangle').style.backgroundColor="blue";
+				document.getElementById('c1').innerHTML="Color = blue ";
+			}
+
+			function changeHeight() {
+				document.getElementById('rectangle').height="400";
+				document.getElementById('h1').innerHTML="Height = 400 px.";
+			}
+		
+			function resetP() {
+				document.getElementById('rectangle').style.backgroundColor="yellow";
+				document.getElementById('rectangle').height="300";
+				document.getElementById('c1').innerHTML="Color = Yellow ";
+				document.getElementById('h1').innerHTML="Height = 300 px.";
+			}
+			
+			
+		
+		</script>
+	
+	</body>
+</html>
