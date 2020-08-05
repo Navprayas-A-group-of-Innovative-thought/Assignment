@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import { Route, Switch, BrowserRouter } from 'react-router-dom';  //uncomment this line
+import SampleComponent from './components/Sample.component';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <BrowserRouter > //uncomment this line
+
+
+    // <switch>  //uncomment this line
+
+    //you can test your component here by similar structure
+    <SampleComponent />  //comment this line
+
+    // <Route path="/" component={SampleComponent} /> //uncomment this line
+    // </switch> //uncomment this line 
+
+    // </BrowserRouter > //uncomment this line
   );
 }
 
