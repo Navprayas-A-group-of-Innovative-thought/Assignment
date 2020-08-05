@@ -10,7 +10,7 @@ export const initialState = {
   error: "",
 };
 
-export const fetchUsersReducer = (state = initialState, action) => {
+export const fetchUsersReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case FETCH_USERS:
       return { ...initialState, loading: true };
