@@ -14,7 +14,7 @@ git push -u origin "your branch"
 <br>
 ##### Folders and their meaning
 <br>
-<br>
+
 ###### screens:
 write all your screen components here
 
