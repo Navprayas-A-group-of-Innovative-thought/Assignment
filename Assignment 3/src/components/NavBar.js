@@ -5,8 +5,13 @@ import Typography from '@material-ui/core/Typography'
 import { Twirl as Hamburger } from 'hamburger-react'
 import { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
+  heroContent: {
+    backgroundColor: theme.palette.background.default,
+    padding: theme.spacing(2),
+  },
   icon: {
     marginRight: theme.spacing(2),
   }
@@ -75,8 +80,22 @@ const NavBar = () => {
             <Typography  variant="h6" color="inherit" noWrap>
                    NAVPRAYAS - A GROUP OF INNOVATIVE THOUGHTS   
             </Typography>
+            
+
             </Toolbar>
+            
              </AppBar>
+             <div className={classes.heroContent}>
+        <Container maxWidth="sm">
+        <Typography component="h3" variant="h3" align="center" color="textPrimary" gutterBottom>
+              Events
+            </Typography>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+              Glimpses of events by us.
+            </Typography>
+
+          </Container>
+      </div>
         
         </div>
         
