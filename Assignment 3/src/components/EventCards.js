@@ -33,7 +33,6 @@ const EventCards = () => {
     const image_name = ['mtse',  'puzzle', 'chess', 'rangotsav','sketch', 'poem']
     const card_title = ['MTSE', 'PUZZLE', 'CHESS' ,'RANGOTSAV','SKETCH','POEM']
     const cards = [0, 1, 2, 3, 4, 5]
-    const currentCard = 'mtse'
 
     return (
       

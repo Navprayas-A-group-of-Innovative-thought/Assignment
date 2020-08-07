@@ -21,7 +21,7 @@ const Events = () => {
           
         <NavBar />
         <EventCards />
-        {/* <MtseEvent /> */}
+        
      
       </div>
       
