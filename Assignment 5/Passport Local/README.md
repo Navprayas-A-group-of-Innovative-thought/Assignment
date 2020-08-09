@@ -21,3 +21,9 @@
 `npm install`
 
 `npm start`
+
+## Endpoints 
+
+* Sign Up page :  `http://localhost:5000/api/signup`
+* Login Page : `http://localhost:5000/api/login`
+* Logout : `http://localhost:5000/api/logout`
