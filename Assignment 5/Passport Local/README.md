@@ -15,6 +15,9 @@
 ## Quick Start
 
 `npm cache verify`
+
 `npm cache clean --force (Optional)`
+
 `npm install`
+
 `npm start`
