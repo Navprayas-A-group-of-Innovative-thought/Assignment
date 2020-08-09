@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment 4</title>
+</head>
+
+<body>
+    <center>
+        <form>
+            <h1>Hands on JavaScript-I</h1>
+            <p>Validate if entered number is between 1 to 10.</p>
+            <label for="num">Enter a number here : </label>
+            <input type="number" id="num" name="num">
+            <button type="button" onclick="myFunction()">Submit</button>
+            <p id="demo1"></p>
+            <!-- ////////////////////////////// -->
+            <h1>Hands on JavaScript-II</h1>
+            <label>Width and Height of window:</label>
+            <button type="button" onclick="res()">Click here</button>
+            <p id="demo2"></p>
+            <!-- ///////////////////////////// -->
+            <h1>Hands on JavaScript-III</h1>
+            <canvas id="rectangle" width="400px" height="300px" style="border:2px solid;background-color: yellow;"></canvas>
+
+            <p id="hChange"></p>
+            <p id="cChange"></p>
+            <button type="button" onclick="changeHeight()">Click here to change the height</button>
+            <button type="button" onclick="changeColor()">Click here to change the color</button>
+            <script type="text/javascript">
+                function myFunction() {
+                    var x, text;
+                    x = document.getElementById("num").value;
+                    if (isNaN(x) || x <
+                        1 || x >
+                        10) {
+                        text = "Input is invalid."
+                    } else {
+                        text = "Input is valid."
+                    }
+                    document.getElementById("demo1").innerHTML = text;
+                }
+
+                function res() {
+                    var w = window.innerWidth;
+                    var h = window.innerHeight;
+                    document.getElementById("demo2").innerHTML = "Resolution of window " + w + " px X " + h + " px";
+                }
+
+                function changeColor() {
+                    document.getElementById('rectangle').style.backgroundColor = "red";
+                    document.getElementById('c1').innerHTML = "Color = red";
+                }
+
+                function changeHeight() {
+                    document.getElementById('rectangle').height = "400";
+                    document.getElementById('h1').innerHTML = "Height = 400 px.";
+                }
+
+                function resetP() {
+                    document.getElementById('rectangle').style.backgroundColor = "yellow";
+                    document.getElementById('rectangle').height = "300";
+                    document.getElementById('c1').innerHTML = "Color = Yellow ";
+                    document.getElementById('h1').innerHTML = "Height = 300 px.";
+                }
+            </script>
+        </form>
+    </center>
+
+</body>
+
+</html>
