@@ -1,6 +1,9 @@
 const router = require('express').Router();
+const mongoose = require('mongoose')
 var passport = require('passport')
-var User = require('../model/users.model')
+const bcrypt = require('bcrypt')
+var user = require('../model/users.model')
+const session = require('express-session')
 const bodyParser = require('body-parser')
 router.use(bodyParser.json())
 
@@ -10,29 +13,47 @@ router.route('/').get((req, res) => {
 });
 
 //signup here
-router.post('/signup', (req, res, next) => {
-    User.register(new User({email: req.body.email}), 
-      req.body.password, (err, user) => {
-      if(err) {
-        res.statusCode = 500;
-        res.setHeader('Content-Type', 'application/json');
-        res.json({err: err});
-      }
-      else {
-        passport.authenticate('local')(req, res, () => {
-          res.statusCode = 200;
-          res.setHeader('Content-Type', 'application/json');
-          res.json({success: true, status: 'Registration Successful!'});
-        });
-      }
-    });
-  });
+router.post('/signup', (req, res) => {
+  var { firstName, lastName, email, password } = req.body;
+  var err;
+  if ( !firstName || !lastName || !email || !password) {
+      err = "Please Fill All The Fields...";
+      res.json({success: false, status: err});
+  }
+  if (typeof err == 'undefined') {
+      user.findOne({ email: email }, function (err, data) {
+          if (err) throw err;
+          if (data) {
+              console.log("User Exists");
+              err = "User Already Exists With This Email...";
+              res.json({success: false, status: err});
+          } else {
+              bcrypt.genSalt(10, (err, salt) => {
+                  if (err) throw err;
+                  bcrypt.hash(password, salt, (err, hash) => {
+                      if (err) throw err;
+                      password = hash;
+                    user({
+                          firstName,
+                          lastName,
+                          email,
+                          password,
+                      }).save((err, data) => {
+                          if (err) throw err;
+                          res.json({success: true, status: 'Successfully signed up'});
+                      });
+                  });
+              });
+          }
+      });
+  }
+});
 
 //login here
 router.post('/login', passport.authenticate('local'), (req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.json({success: true, status: 'You are successfully logged in!'});
+    res.json({success: true, status: 'You are successfully logged in'});
   });
 
 //logout here

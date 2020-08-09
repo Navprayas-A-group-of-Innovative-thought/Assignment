@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 var passport = require('passport');
 var authenticate = require('./authenticate')
 var session = require('express-session')
-var FileStore = require('session-file-store')(session)
 var User = require('./model/users.model')
 
 //for cross origin resource sharing
@@ -24,12 +23,11 @@ const connection = mongoose.connection;
 connection.once('open', ()=>console.log("database connected"));
 //---------------------------------------------------------------------
 
-app.use(session({                            //Using Sessions
-    name: 'session-id',
-    secret: 'secretkey771',
-    saveUninitialized: false,
-    resave: false,
-    store: new FileStore()
+app.use(session({
+  secret: 'secretkey771',
+  maxAge: 3600000,
+  saveUninitialized: false,
+  resave: false,
   }))
 
 app.use(passport.initialize())
@@ -44,21 +42,16 @@ app.use('/api/', myRoute);
 //---------------------------------------------------------------------
 //Handle request here
 
-function auth(req, res, next) {
-    console.log(req.user);
-
-    if (!req.user) {
-      var err = new Error('You are not authenticated!');
-      err.status = 403;
-      next(err);
-    }
-    else {
-          next();
-    }
+const checkAuthenticated = function (req, res, next) {
+  if (req.isAuthenticated()) {
+      res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, post-check=0, pre-check=0');
+      return next();
+  } else {
+      res.redirect('/login');
+  }
 }
 
-app.use(auth)
-
+app.use(checkAuthenticated)
 
 const port = 5000;
 
