@@ -32,3 +32,7 @@ Everyone create a branch of your name and push all your assingments in your resp
   - **Note**: Add relevant message like Assignment 1 completed
 - <code>git push -u origin "Your branch name"</code>
   - **Note:** Before this command make sure you are on correct branch by using <code> git branch </code> Your current active branch will be green
+
+
+
+I have added the edited files for react only...to check it open a react app and use these files .
