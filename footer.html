@@ -10,17 +10,45 @@
             margin: 0;
             padding: 0;
         }
+        .main{
+            display: flex;
+            flex-direction: column;
+        }
         .f-container{
             display: flex;
-            justify-content: space-evenly;
-            background-color: violet;
+            align-items: 10px;
+            background-color: #203040;
+            color: white;
+        }
+        .h-container{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+            color: white;
+            background-color: #203040;
+        }
+        .m-container{
+            width: 100%;
         }
         .f-item{
-            background-color: teal;
+            /* background-color: teal; */
             width: 100%;
-            height: 250px;
+            height: max-content;
             margin: 2px;
-            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        
+            
+        }
+        
+
+        .f-subitem:nth-child(1){
+                color: #1d98fd;
+                font-size: 20px;
+        }
+        .span-text{
+                color: coral;
         }
         /* /////////icons////// */
         .fa {
@@ -30,7 +58,11 @@
             height: 15px;
             text-align: center;
             text-decoration: none;
-            margin: 5px 10px;
+            margin: 10px;
+        }
+        .fa:hover {
+            transform: scale(1.3);
+            /* opacity: 0.7; */
         }
         .fa-facebook {
             background: #3B5998;
@@ -50,43 +82,71 @@
             background: linear-gradient(180deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d,rgb(255, 174, 0));
             color: white;
         }
+        @media screen and (max-width:660px){
+            .f-container{
+                /* display: unset; */
+                flex-direction: column;
+                text-align: center;
+            }
+            .f-item{
+                background-color: #203040;
+                color: white;
+            }
+        }
 
-.fa:hover {
-    opacity: 0.7;
-}
+        
 
     </style>
 </head>
 <body>
-    <div class="f-container">
-        <div class="f-item">
-            <div class="f-subitem">About Us</div>
-            <div class="f-subitem">Team</div>
+    <div class="main">
+
+        <div class="h-container">
+            Header
         </div>
-        <div class="f-item">
-            <div class="f-subitem">Address</div>
-            <div class="f-subitem">Manpur Durga sthan</div>
-            <div class="f-subitem">Working Hours</div>
-            <div class="f-subitem">9am to 5pm</div>
-            <div class="f-subitem">Mon - Sat</div>
-        </div>
-        <div class="f-item">
-            <div class="f-subitem">Contact Us</div>
-            <div class="f-subitem">Mobile No. : +91 1234567890</div>
-            <div class="f-subitem">Email : 1234@5678.com</div>
+    
+        <div class="m-container">
+            <p>Main content goes Here</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aperiam quia esse voluptas voluptatem sunt nemo earum in! Veniam adipisci provident harum debitis facere odio dolor ex necessitatibus iure. Provident!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non illum voluptatibus possimus sit voluptates error. Adipisci vero, nemo possimus, expedita saepe cum ea velit est molestias dolorem, in quisquam.</p>
 
         </div>
-        <div class="f-item">
-            <div class="f-subitem">Follow Us on</div>
-
-            <div class="f-subitem">
-                <div class="f-sub-subitem">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                </div>
-                <div class="sub-subitem">
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
+    
+        <div class="f-container">
+            <div class="f-item">
+                <div class="f-subitem">Get Us Know</div>
+                <div class="f-subitem"><span class="span-text">About Us</span> </div>
+                <div class="f-subitem">Team</div>
+            </div>
+            <div class="f-item">
+                <div class="f-subitem">Address</div>
+                <div class="f-subitem">Manpur Durga sthan</div>
+                <div class="f-subitem"><span class="span-text">Working Hours</span> </div>
+                <div class="f-subitem">9am to 5pm</div>
+                <div class="f-subitem">Mon - Sat</div>
+            </div>
+            <div class="f-item">
+                <div class="f-subitem">Contact Us</div>
+                <div class="f-subitem">Mobile No. : +91 1234567890</div>
+                <div class="f-subitem">Email : 1234@5678.com</div>
+    
+            </div>
+            <div class="f-item">
+                <div class="f-subitem">Follow Us on</div>
+    
+                <div class="f-subitem">
+                    <div class="f-sub-subitem">
+                        <span>
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </span>
+                    
+                        <span>
+                            <a href="#" class="fa fa-instagram"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
