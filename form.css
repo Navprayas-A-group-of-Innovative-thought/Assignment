@@ -1,0 +1,60 @@
+/*https://kreativespill.com/wp-content/uploads/2014/07/loki-theme-website-kreativespill-background1.jpg*/
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    color:#ffffff;
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+}
+h2{
+    text-align: center;
+    color:#000000;
+}
+h4{
+    text-align: center;
+    color:#000000;
+    font-size: 50em;
+}
+form{
+    display: block;
+    border:brown solid;
+    border-width:1.3em top;
+    text-align: center;
+    width:50%;
+    padding: 2em 1em 2em 1em;
+    background-color:white;
+    border-radius:0.5em ;
+    margin-left:auto;
+    margin-right:auto;
+}
+div{
+    font-size: 1.3em;
+}
+body{
+    background-color:maroon;
+    color:#000000;
+    background-image: linear-gradient(rgb(133, 84, 84),rgb(250, 100, 125));
+    /background-image: url("https://xd.adobe.com/ideas/wp-content/uploads/2019/10/Why-Sketching-is-an-Essential-Skill-for-Every-UX-Designer-1257x550.png");/
+}
+
+input{
+    width:100%;
+    background-color:#bcf5f5;
+    padding: 0.8em 0.2em;
+}
+input[type=submit]{
+    background-image:linear-gradient(rgb(133, 84, 84),rgb(250, 100, 125));
+    color: white;
+}
+input:focus{
+    background-color:lightblue;
+}
+input[type=submit]:hover{
+    background-color:maroon ;
+    color:white;
+}
+textarea{
+    background-color:#bcf5f5;
+    width: 100%;
+}
